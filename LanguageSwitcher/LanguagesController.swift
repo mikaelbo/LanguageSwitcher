@@ -10,7 +10,7 @@ import UIKit
 
 class LanguagesController: UITableViewController {
 
-    let localizations: [PreferredLocalization] = [.Default, .English, .Swedish, .ChineseSimplified, .ChineseTraditional]
+    let localizations: [PreferredLocalization] = [.default, .english, .swedish, .chineseSimplified, .chineseTraditional]
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)

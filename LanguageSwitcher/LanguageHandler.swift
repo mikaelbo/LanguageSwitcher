@@ -13,11 +13,11 @@ func LocalizedString(_ key: String) -> String {
 }
 
 enum PreferredLocalization: String {
-    case Swedish = "sv"
-    case English = "en"
-    case ChineseSimplified = "zh-Hans"
-    case ChineseTraditional = "zh-Hant"
-    case Default = "default"
+    case swedish = "sv"
+    case english = "en"
+    case chineseSimplified = "zh-Hans"
+    case chineseTraditional = "zh-Hant"
+    case `default` = "default"
 }
 
 extension NSNotification.Name {
@@ -40,7 +40,7 @@ class LanguageHandler: NSObject {
             return currentLocalization
         }
     }
-    private var currentLocalization: PreferredLocalization = .Default
+    private var currentLocalization: PreferredLocalization = .default
     private(set) var currentBundle: Bundle = Bundle.main
     private(set) var currentLocale: Locale = Locale.current
 
@@ -68,7 +68,7 @@ class LanguageHandler: NSObject {
     }
 
     func localizedString(_ key: String) -> String {
-        if currentLocalization == .Default {
+        if currentLocalization == .default {
             return NSLocalizedString(key, comment: "")
         }
         return currentBundle.localizedString(forKey: key, value: nil, table: nil)
@@ -81,7 +81,7 @@ class LanguageHandler: NSObject {
 
     private func loadCurrentBundle() {
         var bundle: Bundle?
-        if preferredLocalization != .Default {
+        if preferredLocalization != .default {
             let key = currentLocalization.rawValue
             if let path = Bundle.main.path(forResource: key, ofType: "lproj") {
                 bundle = Bundle(path: path)
@@ -92,7 +92,7 @@ class LanguageHandler: NSObject {
 
     private func loadCurrentLocale() {
         var locale: Locale?
-        if currentLocalization != .Default {
+        if currentLocalization != .default {
             locale = Locale(identifier: currentLocalization.rawValue)
         }
         currentLocale = locale ?? Locale.current
