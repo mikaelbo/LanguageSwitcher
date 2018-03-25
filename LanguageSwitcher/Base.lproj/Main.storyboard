@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ml1-2k-foT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Languages Controller-->
+        <scene sceneID="4Py-Vy-2Ao">
+            <objects>
+                <tableViewController id="sr2-85-EZW" customClass="LanguagesController" customModule="LanguageSwitcher" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" estimatedRowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="Rxn-eX-qQq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="U3Z-uN-PF3">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="d7a-3x-1mE">
+                                        <rect key="frame" x="0.0" y="35" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d7a-3x-1mE" id="F9B-x7-JuW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NkB-aP-YkH" customClass="LocalizableLabel" customModule="LanguageSwitcher" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="-0.5" width="343" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="textIdentifier" value="LANGUAGE_DEFAULT"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NkB-aP-YkH" secondAttribute="trailing" id="EpV-0K-iKB"/>
+                                                <constraint firstItem="NkB-aP-YkH" firstAttribute="centerY" secondItem="F9B-x7-JuW" secondAttribute="centerY" id="YIa-Ix-Vcx"/>
+                                                <constraint firstItem="NkB-aP-YkH" firstAttribute="leading" secondItem="F9B-x7-JuW" secondAttribute="leadingMargin" id="s4k-Rc-yb6"/>
+                                                <constraint firstItem="NkB-aP-YkH" firstAttribute="height" secondItem="F9B-x7-JuW" secondAttribute="height" id="sBS-Lr-aKT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5hl-nR-T5T">
+                                        <rect key="frame" x="0.0" y="79" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5hl-nR-T5T" id="2Te-Ji-Wvc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRt-Ia-Al7" customClass="LocalizableLabel" customModule="LanguageSwitcher" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="-0.5" width="343" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="textIdentifier" value="LANGUAGE_ENGLISH"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="oRt-Ia-Al7" firstAttribute="centerY" secondItem="2Te-Ji-Wvc" secondAttribute="centerY" id="8qK-bY-sBu"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="oRt-Ia-Al7" secondAttribute="trailing" id="E7m-XY-fpb"/>
+                                                <constraint firstItem="oRt-Ia-Al7" firstAttribute="height" secondItem="2Te-Ji-Wvc" secondAttribute="height" id="mrm-7t-zth"/>
+                                                <constraint firstItem="oRt-Ia-Al7" firstAttribute="leading" secondItem="2Te-Ji-Wvc" secondAttribute="leadingMargin" id="x5S-Aa-nyu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4Oq-wH-IGf">
+                                        <rect key="frame" x="0.0" y="123" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4Oq-wH-IGf" id="ds1-AG-k8t">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ML-Xj-sAk" customClass="LocalizableLabel" customModule="LanguageSwitcher" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="-0.5" width="343" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="textIdentifier" value="LANGUAGE_SWEDISH"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="7ML-Xj-sAk" firstAttribute="leading" secondItem="ds1-AG-k8t" secondAttribute="leadingMargin" id="5iw-KJ-3hR"/>
+                                                <constraint firstItem="7ML-Xj-sAk" firstAttribute="centerY" secondItem="ds1-AG-k8t" secondAttribute="centerY" id="C5Q-nj-xEu"/>
+                                                <constraint firstItem="7ML-Xj-sAk" firstAttribute="height" secondItem="ds1-AG-k8t" secondAttribute="height" id="Dhk-mo-RPo"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="7ML-Xj-sAk" secondAttribute="trailing" id="heN-DQ-WRX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="FVm-Q5-bUF">
+                                        <rect key="frame" x="0.0" y="167" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FVm-Q5-bUF" id="GOR-Af-mis">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xqv-u2-T9D" customClass="LocalizableLabel" customModule="LanguageSwitcher" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="-0.5" width="351" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="textIdentifier" value="LANGUAGE_CHINESE_SIMPLIFIED"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xqv-u2-T9D" firstAttribute="height" secondItem="GOR-Af-mis" secondAttribute="height" id="5eP-AY-tyL"/>
+                                                <constraint firstItem="Xqv-u2-T9D" firstAttribute="leading" secondItem="GOR-Af-mis" secondAttribute="leadingMargin" id="Crn-A9-wLo"/>
+                                                <constraint firstItem="Xqv-u2-T9D" firstAttribute="centerY" secondItem="GOR-Af-mis" secondAttribute="centerY" id="MYz-u2-4SP"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Xqv-u2-T9D" secondAttribute="trailingMargin" id="ocR-7W-SWj"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="wco-Nn-e3k">
+                                        <rect key="frame" x="0.0" y="211" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wco-Nn-e3k" id="PK6-Cj-UOI">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Deh-iy-OLe" customClass="LocalizableLabel" customModule="LanguageSwitcher" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="-0.5" width="343" height="44"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="textIdentifier" value="LANGUAGE_CHINESE_TRADITIONAL"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Deh-iy-OLe" firstAttribute="height" secondItem="PK6-Cj-UOI" secondAttribute="height" id="Cy3-EY-H5W"/>
+                                                <constraint firstItem="Deh-iy-OLe" firstAttribute="centerY" secondItem="PK6-Cj-UOI" secondAttribute="centerY" id="D03-Im-wfU"/>
+                                                <constraint firstItem="Deh-iy-OLe" firstAttribute="leading" secondItem="PK6-Cj-UOI" secondAttribute="leadingMargin" id="M6m-1E-edj"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Deh-iy-OLe" secondAttribute="trailing" id="mlV-7V-ikb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="sr2-85-EZW" id="Ob3-nL-dtN"/>
+                            <outlet property="delegate" destination="sr2-85-EZW" id="IGa-c3-C6A"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="RTr-EA-R44" customClass="LocalizableNavigationItem" customModule="LanguageSwitcher" customModuleProvider="target">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="titleIdentifier" value="LANGUAGE"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1It-V5-IXB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-256.80000000000001" y="-90.404797601199405"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qMu-LN-qQE">
+            <objects>
+                <navigationController id="Ml1-2k-foT" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vBa-xf-tVr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sr2-85-EZW" kind="relationship" relationship="rootViewController" id="zWV-2y-pf6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IMn-FW-KAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1209" y="-90"/>
+        </scene>
+    </scenes>
+</document>

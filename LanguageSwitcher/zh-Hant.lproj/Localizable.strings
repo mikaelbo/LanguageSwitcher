@@ -1,0 +1,14 @@
+/* 
+  Localizable.strings
+  LanguageSwitcher
+
+  Created by Mikael on 2018-03-25.
+  Copyright © 2018 Mikael. All rights reserved.
+*/
+
+"LANGUAGE" = "語言";
+"LANGUAGE_CHINESE_SIMPLIFIED" = "簡體中文";
+"LANGUAGE_CHINESE_TRADITIONAL" = "繁體中文";
+"LANGUAGE_DEFAULT" = "默認";
+"LANGUAGE_ENGLISH" = "英語";
+"LANGUAGE_SWEDISH" = "瑞典語";
