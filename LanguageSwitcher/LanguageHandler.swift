@@ -50,21 +50,19 @@ class LanguageHandler: NSObject {
 
     override init() {
         super.init()
-        loadPreferredLocalizationIfNeeded()
+        loadCurrentLocalizationIfNeeded()
     }
 
-    private func loadPreferredLocalizationIfNeeded() {
+    private func loadCurrentLocalizationIfNeeded() {
         if let key = UserDefaults.standard.string(forKey: PreferredLanguageKey),
             let localization = PreferredLocalization(rawValue: key) {
             currentLocalization = localization
         }
-        loadBundleIfNeeded()
-        loadCurrentLocaleIfNeeded()
+        loadCurrentBundleAndLocale()
     }
 
     private func updateFromCurrentLocalization() {
-        loadBundleIfNeeded()
-        loadCurrentLocaleIfNeeded()
+        loadCurrentBundleAndLocale()
         UserDefaults.standard.setValue(currentLocalization.rawValue, forKey: PreferredLanguageKey)
         NotificationCenter.default.post(name: .PreferredLanguageDidChange, object: nil)
     }
@@ -76,27 +74,27 @@ class LanguageHandler: NSObject {
         return currentBundle.localizedString(forKey: key, value: nil, table: nil)
     }
 
-    private func loadCurrentLocaleIfNeeded() {
-        if currentLocalization == .Default {
-            currentLocale = Locale.current
-        } else {
-            let localeString = currentLocalization.rawValue
-            currentLocale = Locale(identifier: localeString)
-        }
+    private func loadCurrentBundleAndLocale() {
+        loadCurrentBundle()
+        loadCurrentLocale()
     }
 
-    private func loadBundleIfNeeded() {
+    private func loadCurrentBundle() {
         var bundle: Bundle?
-
-        defer {
-            currentBundle = bundle ?? Bundle.main
-        }
-
         if preferredLocalization != .Default {
             let key = currentLocalization.rawValue
             if let path = Bundle.main.path(forResource: key, ofType: "lproj") {
                 bundle = Bundle(path: path)
             }
         }
+        currentBundle = bundle ?? Bundle.main
+    }
+
+    private func loadCurrentLocale() {
+        var locale: Locale?
+        if currentLocalization != .Default {
+            locale = Locale(identifier: currentLocalization.rawValue)
+        }
+        currentLocale = locale ?? Locale.current
     }
 }
