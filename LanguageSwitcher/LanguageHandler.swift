@@ -79,7 +79,7 @@ class LanguageHandler: NSObject {
 
     private func loadCurrentBundle() {
         var bundle: Bundle?
-        if preferredLocalization != .default {
+        if currentLocalization != .default {
             let key = currentLocalization.rawValue
             if let path = Bundle.main.path(forResource: key, ofType: "lproj") {
                 bundle = Bundle(path: path)
