@@ -28,6 +28,8 @@ private let PreferredLanguageKey = "PreferredLanguage"
 
 class LanguageHandler: NSObject {
 
+    static let `default` = LanguageHandler()
+
     var preferredLocalization: PreferredLocalization {
         set {
             if currentLocalization != newValue {
@@ -43,8 +45,6 @@ class LanguageHandler: NSObject {
     private var currentLocalization: PreferredLocalization = .default
     private(set) var currentBundle: Bundle = Bundle.main
     private(set) var currentLocale: Locale = Locale.current
-
-    static let `default` = LanguageHandler()
 
     private override init() {
         super.init()
