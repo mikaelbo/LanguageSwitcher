@@ -25,7 +25,6 @@ extension NSNotification.Name {
 }
 
 private let PreferredLanguageKey = "PreferredLanguage"
-private let defaultHandler = LanguageHandler()
 
 class LanguageHandler: NSObject {
 
@@ -40,15 +39,14 @@ class LanguageHandler: NSObject {
             return currentLocalization
         }
     }
+
     private var currentLocalization: PreferredLocalization = .default
     private(set) var currentBundle: Bundle = Bundle.main
     private(set) var currentLocale: Locale = Locale.current
 
-    class var `default`: LanguageHandler {
-        return defaultHandler
-    }
+    static let `default` = LanguageHandler()
 
-    override init() {
+    private override init() {
         super.init()
         loadCurrentLocalizationIfNeeded()
     }
