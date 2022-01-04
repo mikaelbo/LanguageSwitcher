@@ -21,10 +21,15 @@ class LocalizableLabel: UILabel {
     }
 
     private func registerForLanguageChangeNotification() {
-        NotificationCenter.default.addObserver(forName: .PreferredLanguageDidChange,
-                                               object: nil,
-                                               queue: OperationQueue.main) { [weak self] (notification) in
-                                                self?.textIdentifier = self?.textIdentifier
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(preferredLanguageDidChange),
+                                               name: .PreferredLanguageDidChange,
+                                               object: nil)
+    }
+
+    @objc func preferredLanguageDidChange() {
+        DispatchQueue.main.async { [weak self] in
+            self?.textIdentifier = self?.textIdentifier
         }
     }
 
@@ -59,10 +64,15 @@ class LocalizableNavigationItem: UINavigationItem {
     }
 
     private func registerForLanguageChangeNotification() {
-        NotificationCenter.default.addObserver(forName: .PreferredLanguageDidChange,
-                                               object: nil,
-                                               queue: OperationQueue.main) { [weak self] (notification) in
-                                                self?.titleIdentifier = self?.titleIdentifier
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(preferredLanguageDidChange),
+                                               name: .PreferredLanguageDidChange,
+                                               object: nil)
+    }
+
+    @objc func preferredLanguageDidChange() {
+        DispatchQueue.main.async { [weak self] in
+            self?.titleIdentifier = self?.titleIdentifier
         }
     }
 

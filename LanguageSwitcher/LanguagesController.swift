@@ -19,7 +19,7 @@ class LanguagesController: UITableViewController {
 
     func selectCurrentLanguageCell() { // For demonstrating purposes only ;)
         let localization = LanguageHandler.default.preferredLocalization
-        if let index = localizations.index(of: localization) {
+        if let index = localizations.firstIndex(of: localization) {
             for cell in tableView.visibleCells {
                 if let indexPath = tableView.indexPath(for: cell) {
                     let isSelectedCell = index == indexPath.row
